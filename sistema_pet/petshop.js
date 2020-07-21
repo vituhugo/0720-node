@@ -217,7 +217,12 @@ function encontraPet() {
 
 }
 
-/** Criar função que exibe os pets pelo nome */
+/** Através de um nome de um pet, ele vai exibir no terminal o pet e suas caracteristicas.
+ * Caso não encontre ele exibe a mensagem "PET não encontrado."
+ * 
+ * @param nome Nome do pet que vai procurar
+ * @return undefined
+ */
 function exibePets() {
 
 }
