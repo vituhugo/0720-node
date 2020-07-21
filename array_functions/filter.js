@@ -17,14 +17,25 @@
 //     console.log ("O nome do dog é:", nome);
 // }
 
-let caracteristicas = {
-    cor_olhos: "azuis", 
-    usa_oculos: true, 
-    sexo: "masculino"
-};
+// let caracteristicas = {
+//     cor_olhos: "azuis", 
+//     usa_oculos: true, 
+//     sexo: "masculino"
+// };
 
-for (let prop in caracteristicas) {
-    let valor_caracteristica = caracteristicas[prop]
-    console.log("A caracterista do momento é:", prop);
-    console.log("O valor do momento é:", valor_caracteristica);
+// for (let prop in caracteristicas) {
+//     let valor_caracteristica = caracteristicas[prop]
+//     console.log("A caracterista do momento é:", prop);
+//     console.log("O valor do momento é:", valor_caracteristica);
+// }
+
+let bart = { 
+    mae: "Marge", 
+    pai: "Homer", 
+    hobbie: "Skate", 
+    corCamiseta: "Laranja" 
+}
+
+for(let valores in bart){ 
+    console.log(bart[valores]) 
 }
