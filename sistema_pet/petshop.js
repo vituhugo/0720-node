@@ -213,8 +213,24 @@ let pets = [
  * @param nome Nome do Pet que vai procurar.
  * @return Object pet
  */
-function encontraPet() {
+function encontrarPet(nome) {
+    // for (let pet of pets) {
+    //     if (pet.nome === nome) {
+    //         return pet;
+    //     }
+    // }
+    // return false;
+    let pet_encontrado = pets.find(pet => pet.nome === nome);
+    
+    /**
+     * O JS entende os seguintes valores como false 
+     * null === false
+     * "" === false
+     * undefined === false
+     */
+    if (!pet_encontrado) return false;
 
+    return pet_encontrado;
 }
 
 /** Através de um nome de um pet, ele vai exibir no terminal o pet e suas caracteristicas.
@@ -223,17 +239,44 @@ function encontraPet() {
  * @param nome Nome do pet que vai procurar
  * @return undefined
  */
-function exibePets() {
+function exibePet(nome) {
+    let pet_encontrado = encontrarPet(nome);
+    if (pet_encontrado === false) {
+        console.log("PET não encontrado.");
+    } else {
+        for(let caracteristica in pet_encontrado) {
+            console.log(caracteristica, pet_encontrado[caracteristica]);
+        }
+    }
+}
+
+
+/** Castra um pet não castrado.
+ * Caso o pet já seja cadastrado exibe, "o pet já esta castrado" no console
+ * 
+ * @param number Posição do pet que vai ser vacinado
+ */
+function castrar() {
 
 }
 
-function adicionaVacina() {
+/**
+ * Adicionar a propriedade de vacina em todos pet da variável petss,
+ * Vacina tem como valor padrão um array vazio.
+ */
+function adicionaVacinaNosPets() {
 
 }
 
-/** Criar função que vacina um pet */
+/** Vacina um pet com a vacina passada como parametro
+ * Se a vacina existir ele exibe "Vacina já foi aplicada."
+ * Se a vacina não existir ele vacina o pet, e adiciona o nome da vacina no array.
+ * @param posicao posicao do pet que vai ser vacinado
+ * @param nome_vacina Nome da vacina a ser dada.
+ */
 function vacinaPet() {
 
 }
 
-encontrarPet("Osvaldo");
+// console.log(encontrarPet("Churros"));
+exibePet("Isis");
